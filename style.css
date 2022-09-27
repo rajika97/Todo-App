@@ -1,0 +1,155 @@
+.container {
+  position: inherit;
+  margin: auto;
+  width: 500px;
+  height: auto;
+  padding-bottom: 100px;
+  background-color: #ccd32c;
+  text-align: center;
+  border: 3px solid #332cd3;
+  border-radius: 2em;
+  align-items: center;
+  right: 50%;
+  left: 50%;
+  color: #332cd3;
+  font-family: "Fira sans", sans-serif, Verdana, "Lucida Sans",
+    "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva;
+}
+
+input,
+button {
+  /* appearance: none; */
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  flex: 1 1 0%;
+  margin: auto;
+  font-size: medium;
+  width: 300px;
+  height: 30px;
+  border: 2px #332cd3 solid;
+  border-radius: 1em;
+  color: #332cd3;
+  padding: 5px 5px;
+  overflow-x: auto;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+#new-task-input:active {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+#submit-tasks {
+  margin: auto;
+  width: 100px;
+  height: 45px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #332cd3;
+  border-radius: 1em;
+  color: #332cd3;
+  font-size: medium;
+  cursor: pointer;
+}
+#submit-tasks:active {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+#submit-tasks:hover {
+  background-color: #dae068;
+}
+
+main {
+  flex: 1 1 0%;
+  width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 0.8rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+#tasks {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+#tasks .task {
+  position: inherit;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  margin-left: 6%;
+  margin-right: 4%;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000;
+  border-radius: 1em;
+  align-items: right;
+  transition: 0.4s;
+}
+
+.task .content {
+  flex: 1 1 10%;
+}
+
+.task .content .text {
+  font-size: 1.2rem;
+  width: 85%;
+  transition: 0.4s;
+  padding-left: 6px;
+}
+
+.task .content .text:not(:read-only) {
+  color: #e8092a;
+}
+
+.task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #332cd3;
+}
+
+.task .actions button:hover {
+  opacity: 0.6;
+}
+
+.task .actions .delete {
+  color: crimson;
+}
+
+.task .actions .edit:active {
+  color: crimson;
+}
+
+.task .actions .delete:active {
+  color: #332cd3;
+}
+
+.check:checked + .text {
+  text-decoration: line-through;
+}
